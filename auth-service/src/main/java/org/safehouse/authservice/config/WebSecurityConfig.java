@@ -49,14 +49,11 @@ public class WebSecurityConfig {
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		);
 		http.authenticationProvider(authenticationProvider());
-
 		http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 		http.addFilterAfter(requestMetaInfoFilter, JwtAuthFilter.class);
-
 		http.authorizeHttpRequests(authorizeRequests -> authorizeRequests
 				.requestMatchers("/api/v1/auth/**").permitAll()
 		);
-
 		http.exceptionHandling((exception) -> exception.authenticationEntryPoint(customAuthenticationEntryPoint));
 
 		return http.build();
