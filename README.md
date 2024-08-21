@@ -4,8 +4,6 @@ Microservice architecture is used in this project. The system consists of severa
 ## Table of Contents:
 - [Technology Stack](#technology-stack)
 - [Features](#features)
-- [Installation](#installation)
-- [CI/CD](#cicd)
 
 ## Technology Stack
 - [Spring Boot](https://spring.io/projects/spring-boot) - Spring Boot is an open-source Java-based framework used to create microservices.
