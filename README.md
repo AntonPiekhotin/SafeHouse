@@ -36,5 +36,3 @@ The Authentication Service is responsible for user authentication and authorizat
 
 #### Data Persistence
 Data is stored in a PostgreSQL database. The database schema is created automatically by Hibernate. Each service has its own database.
-
-x
