@@ -13,8 +13,6 @@ services:
       POSTGRES_DB: house-db
     ports:
       - "5432:5432"
-    networks:
-      - postgres-db-network
 
   # Postgres database for user-microservice
   db2:
@@ -29,8 +27,6 @@ services:
       POSTGRES_DB: user-db
     ports:
       - "5433:5432"
-    networks:
-      - postgres-db-network
 
   # Postgres database for device-microservice
   db3:
@@ -45,23 +41,6 @@ services:
       POSTGRES_DB: device-db
     ports:
       - "5434:5432"
-    networks:
-      - postgres-db-network
-
-  # PgAdmin
-  pgadmin:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: 'test@test.com'
-      PGADMIN_DEFAULT_PASSWORD: 'test'
-    ports:
-      - "54321:80"
-    networks:
-      - postgres-db-network
-
-networks:
-  postgres-db-network:
-    driver: bridge
 
 volumes:
   pg_data:
