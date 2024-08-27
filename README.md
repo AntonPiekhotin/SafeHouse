@@ -25,26 +25,26 @@ Microservice architecture is used in this project. The system consists of severa
 The system consists of several services that are responsible for different tasks.
 The services communicate with each other using REST API.
 
-#### Security
+#### 🔒Security
 - JWT tokens are used for authentication and authorization.
 - Passwords are hashed using BCryptPasswordEncoder.
 
-#### Data Persistence
+#### 📂Data Persistence
 Data is stored in a PostgreSQL database. The database schema is created automatically by Hibernate. Each service has its own database.
 
 ## Services
 
-#### Gateway Service
+#### 🌐Gateway Service
 The Gateway Service is the entry point for all requests. It routes requests to the appropriate service via URL. It also works like a load balancer.
 
-#### Auth Service
+#### 🔑Auth Service
 The Auth Service is responsible for user authentication and authorization. It generates and stores JWT tokens for authenticated users.  
 
-#### User Service
+#### 🙋‍♂️User Service
 The User Service is responsible for managing users. It provides endpoints for reading and updating user information.
 
-#### Device Service
+#### 📱Device Service
 The Device Service is responsible for managing devices. It provides endpoints for creating, reading, updating, deleting devices and getting information from devices. Devices should connect with this service and send their information.
 
-#### House Service
+#### 🏡House Service
 The House Service is responsible for managing houses. It provides endpoints for creating, reading, updating, deleting houses. Also monitoring houses condition, request device-service to read devices info. 
