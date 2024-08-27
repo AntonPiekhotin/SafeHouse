@@ -1,18 +1,22 @@
-server:
-  port: 8080
-  ssl:
-    key-store: classpath:safehouse.jks
-    key-store-password: password
-    key-store-type: JKS
-    key-alias: spring-https
-
-jwt:
-  secret: 'secretKeyForApzProjFAJFASLDKJFLSAKDJFASLDKJFASLDKJFAJFAKJF'
 spring:
   application:
     name: api-gateway
+
+server:
+  port: 8080
+#  ssl:
+#    key-store: classpath:safehouse.jks
+#    key-store-password: password
+#    key-store-type: JKS
+#    key-alias: spring-https
+jwt:
+  secret: 'secretKeyForApzProjFAJFASLDKJFLSAKDJFASLDKJFASLDKJFAJFAKJF'
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+logging:
+  level:
+    root: debug

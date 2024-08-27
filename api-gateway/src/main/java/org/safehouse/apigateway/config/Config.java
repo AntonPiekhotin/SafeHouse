@@ -24,16 +24,16 @@ public class Config {
 		return builder.routes()
 				.route("auth-service", r -> r.path("/api/v1/auth/**")
 						.filters(f -> f.filter(filter))
-						.uri("lb://localhost:8181"))
+						.uri("lb://auth-service"))
 				.route("house-service", r -> r.path("/api/v1/house/**")
 						.filters(f -> f.filter(filter))
-						.uri("lb://localhost:8081"))
+						.uri("lb://house-service"))
 				.route("user-service", r -> r.path("/api/v1/user/**")
 						.filters(f -> f.filter(filter))
-						.uri("lb://localhost:8082"))
+						.uri("lb://user-service"))
 				.route("device-service", r -> r.path("/api/v1/device/**")
 						.filters(f -> f.filter(filter))
-						.uri("lb://localhost:8083"))
+						.uri("lb://device-service"))
 				.build();
 	}
 }
