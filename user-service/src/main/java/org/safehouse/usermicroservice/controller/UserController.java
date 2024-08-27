@@ -18,11 +18,6 @@ public class UserController {
 
 	private final UserService userService;
 
-	@GetMapping
-	public String hello() {
-		return "Hello world from user";
-	}
-
 	@PostMapping("/edit/{id}")
 	public ResponseEntity<?> editUser(@RequestBody GuestInfoDto guestInfoDto, @PathVariable Long id) {
 		if (guestInfoDto == null)
